@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Парсер страниц с заказами",
+  "permissions": ["activeTab", "scripting", "tabs", "webNavigation", "storage"],
+  "host_permissions": [
+    "https://partners.wayfair.com/*",
+    "https://edge.supplieroasis.com/product/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "description": "Расширение для парсинга страниц заказов с Etsy, Amazon, Wayfair, Overstock, Ebay. Сделан Данилом К.",
+  "version": "3.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.etsy.com/your/orders/*",
+        "https://partners.wayfair.com/*",
+        "https://edge.supplieroasis.com/product/",
+        "https://www.ebay.com/"
+      ],
+      "js": ["script.js"]
+    }
+  ]
+}

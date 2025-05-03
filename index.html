@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Расширение для сбора заказов с Etsy/Amazon/Wayfair</title>
+    <link rel="stylesheet" href="bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="d-grid container text-center">
+      <img
+        src="background-logo.png"
+        alt="marketplace-logo"
+        class="img-fluid mt-2"
+      />
+      <button
+        class="btn btn-outline-primary btn-lg mt-3 fs-4"
+        id="getPageSource"
+      >
+        Добавить текущий заказ
+      </button>
+      <button class="btn btn-outline-success btn-lg mt-2 fs-4" id="saveAll">
+        Сохранить все в orders.txt
+      </button>
+      <p id="result" class="mt-3 fs-3">Готово к использованию!</p>
+    </div>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap");
+      html,
+      body {
+        color: #333;
+        font-family: "Sofia Sans Condensed", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        width: 425px;
+        height: 175px;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .loading {
+        display: inline-block;
+        position: relative;
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+    </style>
+    <script src="script.js"></script>
+  </body>
+</html>
