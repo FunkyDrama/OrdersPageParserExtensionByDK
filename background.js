@@ -165,7 +165,7 @@ function searchSKUInInventory(sku) {
     setTimeout(() => {
       let matchedDiv = null;
       const allPartNumbers = document.querySelectorAll(
-        'div[class="_1ja0ee311k   _1ja0ee3173"]'
+        'div[class="_1ja0ee313e   _1ja0ee31bd"]'
       );
       allPartNumbers.forEach((partNumber) => {
         if (partNumber.innerText.trim() === sku) {
